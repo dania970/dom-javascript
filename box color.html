@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myDiv"></div>
+
+    <script>
+        var myDiv = document.getElementById("myDiv");
+        var colors = ["red", "green", "navy", "orange", "purple"];
+        var currentColorIndex = 0;
+
+        myDiv.addEventListener('click', function () {
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            myDiv.style.backgroundColor = colors[currentColorIndex];
+        });
+    </script>
+
+</body>
+
+</html>

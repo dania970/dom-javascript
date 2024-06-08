@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myDiv">dania</div>
+
+    <script>
+        var myDiv = document.getElementById("myDiv");
+
+        myDiv.addEventListener('mouseover', function () {
+            myDiv.innerHTML = "hi";
+        });
+
+        myDiv.addEventListener('mouseout', function () {
+            myDiv.innerHTML = "say hi";
+        });
+    </script>
+
+</body>
+
+</html>

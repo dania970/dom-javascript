@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>box</title>
+    <style>
+        * {
+            font-family: Georgia, serif;
+        }
+
+        article {
+            width: 400px;
+            border: 1px solid rgb(54, 54, 54);
+            background-color: #ececec;
+            position: relative;
+            margin: 5px;
+        }
+
+        article h2 {
+            margin: 0px;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+
+        article .showlink {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+        }
+
+        article .text {
+            background-color: white;
+            padding: 10px;
+            font-family: Verdana, sans-serif;
+            font-size: 0.9em;
+            color: #3e3c3c;
+            display: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const articles = document.querySelectorAll("article");
+
+            articles.forEach((article) => {
+                const showLink = article.querySelector(".showlink a");
+                const textDiv = article.querySelector(".text");
+                const hideLink = textDiv.querySelector("a");
+
+                showLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    textDiv.style.display = "block";
+                    showLink.parentElement.style.display = "none";
+                });
+
+                hideLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    textDiv.style.display = "none";
+                    showLink.parentElement.style.display = "block";
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <article>
+        <h2>paragraph1</h2>
+        <div id="p1_show" class="showlink"><a href="#">Show</a></div>
+        <div id="p1_text" class="text">
+            <p>
+                In the heart of the Enchanted Forest, where the golden sunlight filtered through the emerald canopy,
+                Princess Elara and
+                her loyal companion, Finn the fox, embarked on a quest to restore peace to the kingdom. The ancient
+                prophecy spoke of a
+                hidden gem, the Lumina Stone, which held the power to banish the shadows that had crept into their land.
+                With courage in
+                her heart and magic at her fingertips, Elara ventured deeper into the mystical woods, guided by the
+                whispers of the wind
+                and the twinkling stars above. Along the way, she encountered whimsical creatures and faced daunting
+                challenges, each
+                step bringing her closer to the ultimate test of her bravery and the discovery of her true destiny.
+            </p>
+            <p><a href="#">Hide</a></p>
+        </div>
+    </article>
+
+    <article>
+        <h2>disney</h2>
+        <div id="p2_show" class="showlink"><a href="#">Show</a></div>
+        <div id="p2_text" class="text">
+            <p>
+                As they journeyed onward, they stumbled upon an enchanted grove where time seemed to stand still. There,
+                in the center
+                of the grove, lay the Lumina Stone, glowing with a radiant light. But guarding the stone was the
+                fearsome dragon,
+                Drakthor, who had sworn to protect it from those with impure hearts. With Finn by her side, Elara
+                approached the dragon
+                with a heart full of compassion and a plea for her kingdom's salvation. Drakthor, sensing her sincerity
+                and purity,
+                allowed her to take the Lumina Stone, imparting wisdom and strength to aid her cause.
+            </p>
+            <p><a href="#">Hide</a></p>
+        </div>
+    </article>
+
+    <article>
+        <h2>paragraph2</h2>
+        <div id="p3_show" class="showlink"><a href="#">Show</a></div>
+        <div id="p3_text" class="text">
+            <p>
+                Returning to the kingdom with the stone, Elara faced the final challenge: confronting the sorceress
+                Morgana, whose dark
+                magic had cast the kingdom into despair. In a climactic battle of light and darkness, Elara’s newfound
+                strength and the
+                power of the Lumina Stone triumphed. Morgana's spells were broken, and the kingdom was bathed in light
+                once more. The
+                people rejoiced, and Elara, now a symbol of hope and bravery, was celebrated as a true heroine. With
+                Finn by her side
+                and the kingdom restored, Elara's legend would be told for generations, reminding all that true courage
+                and kindness can
+                overcome even the darkest of times.
+            </p>
+            <p>
+                With the kingdom restored and the shadows banished, life in the land of Eldoria began to flourish once
+                more. The people
+                rebuilt their homes, and the once-withered fields blossomed with vibrant flowers and lush crops. The
+                castle, which had
+                stood as a somber silhouette against the sky, now gleamed with renewed splendor. Elara’s parents, King
+                Alden and Queen
+                Seraphina, welcomed their daughter back with open arms, proud of the hero she had become.
+            </p>
+            <p><a href="#">Hide</a></p>
+        </div>
+    </article>
+</body>
+
+</html>
